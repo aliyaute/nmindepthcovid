@@ -24,19 +24,33 @@ map.on('load', function () {
             'type': 'geojson',
             'data': 'data/NewNMData.geojson'
         },
-        'paint': {
-            'fill-color': [
-                'case', 
-                ['==',['get', 'Poverty_Category_Code'], 6], '#99000d',
-                ['==',['get', 'Poverty_Category_Code'], 5], '#cb181d',
-                ['==',['get', 'Poverty_Category_Code'], 4], '#ef3b2c',
-                ['==',['get', 'Poverty_Category_Code'], 3], '#fb6a4a',
-                ['==',['get', 'Poverty_Category_Code'], 2], '#fc9272',
-                ['==',['get', 'Poverty_Category_Code'], 1], '#fcbba1',
-                ['==',['get', 'Poverty_Category_Code'], 0], '#fee5d9',
-                '#d3d3d3',
+
+        paint: {
+            "fill-color": [
+              "case",
+              ["==", ["get", "Poverty_Category_Code"], 6], "#3f007d",
+              ["==", ["get", "Poverty_Category_Code"], 5], "#54278f",
+              ["==", ["get", "Poverty_Category_Code"], 4], "#6a51a3",
+              ["==", ["get", "Poverty_Category_Code"], 3], "#807dba",
+              ["==", ["get", "Poverty_Category_Code"], 2], "#9e9ac8",
+              ["==", ["get", "Poverty_Category_Code"], 1], "#bcbddc",
+              ["==", ["get", "Poverty_Category_Code"], 0], "#dadaeb",
+              "#d3d3d3"
             ],
-            'fill-outline-color': '#ffffff'
+            "fill-outline-color": "#ffffff"
+        // 'paint': {
+        //     'fill-color': [
+        //         'case', 
+        //         ['==',['get', 'Poverty_Category_Code'], 6], '#99000d',
+        //         ['==',['get', 'Poverty_Category_Code'], 5], '#cb181d',
+        //         ['==',['get', 'Poverty_Category_Code'], 4], '#ef3b2c',
+        //         ['==',['get', 'Poverty_Category_Code'], 3], '#fb6a4a',
+        //         ['==',['get', 'Poverty_Category_Code'], 2], '#fc9272',
+        //         ['==',['get', 'Poverty_Category_Code'], 1], '#fcbba1',
+        //         ['==',['get', 'Poverty_Category_Code'], 0], '#fee5d9',
+        //         '#d3d3d3',
+        //     ],
+        //     'fill-outline-color': '#ffffff'
    
             // 'fill-opacity': [
             //     'step', ['get', 'Percent'],
